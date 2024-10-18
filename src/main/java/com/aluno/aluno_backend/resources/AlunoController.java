@@ -15,6 +15,7 @@ import java.net.URI;
 import java.util.List;
 
 import com.aluno.aluno_backend.dtos.AlunoRequest;
+import com.aluno.aluno_backend.dtos.AlunoResponse;
 import com.aluno.aluno_backend.entities.Aluno;
 import com.aluno.aluno_backend.services.AlunoService;
 
@@ -26,7 +27,7 @@ public class AlunoController {
 
      
       @GetMapping("students")
-      public ResponseEntity<List<Aluno>> getAlunos(){
+      public ResponseEntity<List<AlunoResponse>> getAlunos(){
          return ResponseEntity.ok(service.getAlunos());
       }
     
